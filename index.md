@@ -1,11 +1,11 @@
 ---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
+title: Home
 layout: home
 ---
 
-# We want to make things last
+## We want to make things last
 
 fairdevices wants to become an association, listed as a German _"eingetragener Verein"_. You are more than welcome to join and become a founding member!
 

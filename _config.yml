@@ -42,6 +42,9 @@ plugins:
 markdown: kramdown
 permalink: pretty
 
+header_pages:
+  - about.md
+
 # Defaults
 defaults:
   -
