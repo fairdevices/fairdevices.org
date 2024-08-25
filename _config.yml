@@ -24,7 +24,7 @@ email: info@fairdevices.org
 
 description: A simple blog page for Fair Devices
 baseurl: "/fairdevices.org" # the subpath of your site, e.g. /blog
-url: "https://fairdevices.org" # the base hostname & protocol for your site
+url: "https://fairdevices.github.io" # the base hostname & protocol for your site
 
 theme: minima
 
