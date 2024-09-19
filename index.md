@@ -27,7 +27,7 @@ Thirdly, we will endeavor to obtain funding. The erection of a foundation will s
 
 ![Hand-drawing of a laundry machine](/assets/images/WaMa1.png)
 
-The laundry machines is chosen as a first project item. Usually a small relay refuses its function or the main bearing starts rattling because the dampers lost friction first. Within fairdevices, we would like to develop a universal platine, that will fit most of the conventional machines to secure a second, potentially infinite, repairabel life.
+The laundry machine is chosen as a first project item. Usually a small relay refuses its function or the main bearing starts rattling because the dampers lost friction in the first place. Within fairdevices, we would like to develop a universal platine, that will fit most of the conventional machines to secure a second, potentially infinite, repairabel life.
 
 ## More devices to come…
 
