@@ -28,7 +28,7 @@ url: "https://fairdevices.github.io" # the base hostname & protocol for your sit
 
 theme: minima
 
-gitlab_username: fairdevices
+#gitlab_username: fairdevices
 github_username: fairdevices
 linkedin_username: fairdevices
 rss: rss
