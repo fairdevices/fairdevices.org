@@ -1,0 +1,7 @@
+version: '3'
+
+tasks:
+  serve:
+    desc: "Start the local Jekyll server"
+    cmds:
+      - cmd: bundle exec jekyll serve
