@@ -1,26 +1,26 @@
 ---
 layout: page
-title: Impressum
+title: Imprint
 permalink: /about/
 ---
 
-Momentan handelt es sich bei [fairdevices.org](fairdevices.org) um eine rein private Website für die keine Impressumspflicht besteht.
+[**fair**devices.org](fairdevices.org) is currently a private website for which there is no obligation to provide an imprint.
 
-## Angaben gemäß § 5 TMG
+## Information according to § 5 TMG
 
-Dr.-Ing. Karsten Krätzschmar  
-Copitzer Str. 2  
+Dr.-Ing. Karsten Krätzschmar
+Copitzer Str. 2
 01326 Dresden
 
-## Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:
+## Content responsible according to § 55 Abs. 2 RStV
 
-Dr.-Ing. Karsten Krätzschmar  
-Adresse wie oben
+Dr.-Ing. Karsten Krätzschmar
+Address as above
 
-## Verantwortliche Person
+## Responsible person
 
 Dr.-Ing. Karsten Krätzschmar
 
 [info@fairdevices.org](mailto:info@fairdevices.org)
 
-[fairdevices.org](fairdevices.org)
+[**fair**devices.org](fairdevices.org)
