@@ -4,7 +4,7 @@ title: Imprint
 permalink: /about/
 ---
 
-[**fair**devices.org](fairdevices.org) is currently a private website for which there is no obligation to provide an imprint.
+[**fair**devices.org](fairdevices.org) is a private website with no obligation to provide an imprint.
 
 ## Information according to § 5 TMG
 
@@ -20,6 +20,8 @@ Address as above
 ## Responsible person
 
 Dr.-Ing. Karsten Krätzschmar
+
+## Contact
 
 [info@fairdevices.org](mailto:info@fairdevices.org)
 
