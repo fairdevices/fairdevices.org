@@ -12,7 +12,7 @@ Dr.-Ing. Karsten Krätzschmar
 Copitzer Str. 2
 01326 Dresden
 
-## Content responsible according to § 55 Abs. 2 RStV
+## Content responsible according to § 55 para. 2 RStV
 
 Dr.-Ing. Karsten Krätzschmar
 Address as above
