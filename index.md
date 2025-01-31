@@ -7,7 +7,7 @@ layout: home
 
 ## We want to make things last
 
-*fairdevices* wants to become an association, listed as a German *"eingetragener Verein"*. You are more than welcome to join and become a founding member!
+_**fair**devices_ wants to become an association, listed as a German _"eingetragener Verein"_. You are more than welcome to join and become a founding member!
 
 The industrial world as we know it exploits too many resources, creates products with planned life cycles, and produces too much waste. We would like to stop this circle by a simple solution: open hardware!
 
@@ -27,7 +27,7 @@ Thirdly, we will endeavor to obtain funding. The establishment of a foundation w
 
 ![Hand-drawing of a laundry machine](/assets/images/WaMa1.png)
 
-The laundry machine is chosen as a first project item. Usually a small relay refuses its function or the main bearing starts rattling due to worn dampers. Within *fairdevices*, we would like to develop a universal circuit board that will fit most of the conventional machines to secure a second, potentially infinite, repairable life.
+The laundry machine is chosen as a first project item. Usually a small relay refuses its function or the main bearing starts rattling due to worn dampers. Within _**fair**devices_, we would like to develop a universal circuit board that will fit most of the conventional machines to secure a second, potentially infinite, repairable life.
 
 ## More devices to come…
 
