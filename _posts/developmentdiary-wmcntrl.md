@@ -4,7 +4,6 @@ title:  "Development Journal for universal washing machine control unit"
 date:   2025-03-06 22:30:29 +0200
 categories: jekyll update
 ---
-_**fair**devices_ wants to become an association, listed as a German _"eingetragener Verein"_.
 
 # Development Journal
 ## Universal Washing Machine Conrtol
