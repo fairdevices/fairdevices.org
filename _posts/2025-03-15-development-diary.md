@@ -11,6 +11,8 @@ categories: jekyll update
 ### Introduction (test)
 This is the development jounal for an open source/hardware washing machine control. It shall help to repair an old washing machine for which there are no spare parts available or update a more current modell to more connectivity functions to as to use cheap electricity tarrifs with an WIFI internet connection.
 
+![frequency detection](/assets/images/frequency-detection.svg)
+
 ### General technical facts
 
 + Input: 230 V, 16 A
