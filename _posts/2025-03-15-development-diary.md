@@ -1,14 +1,14 @@
 ---
 layout: post
 title:  "Development Journal for universal washing machine control unit"
-date:   2025-03-06 22:30:29 +0200
+date:   2025-03-15 18:30:00 +0200
 categories: jekyll update
 ---
 
 # Development Journal
 ## Universal Washing Machine Conrtol
 
-### Introduction
+### Introduction (test)
 This is the development jounal for an open source/hardware washing machine control. It shall help to repair an old washing machine for which there are no spare parts available or update a more current modell to more connectivity functions to as to use cheap electricity tarrifs with an WIFI internet connection.
 
 ### General technical facts
