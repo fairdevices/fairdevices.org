@@ -48,6 +48,62 @@ Switching causes trouble and wear. When using a single relay an arc at opening c
 
 Every switch event shall be synchronized with net voltage in such a way, that the high loads like motor and heating will be switched on just after the zero crossing of the voltage and switch off at zero current by the thyristor. The reaction time of a relay is usually less than 15 ms so it can easily open during on half cycle of the AC net voltage.
 
+This is the first bit of code
+
+' #include <driver/adc.h>
+' #include <driver/dac.h>
+'
+' const int inputPin = 27;  // GPIO-Pin für das Eingangssignal
+' const int outputPin = 25; // DAC1 (GPIO25) für den analogen Ausgang
+'
+' volatile unsigned long lastInterruptTime = 0;
+' volatile unsigned long period = 0;
+' volatile int interruptCounter = 0;
+'
+' void IRAM_ATTR handleInterrupt() {
+'  unsigned long currentTime = micros();
+'  if (interruptCounter > 0) {
+'    period = currentTime - lastInterruptTime;
+'  }
+'  lastInterruptTime = currentTime;
+'  interruptCounter++;
+' }
+'
+' void setup() {
+'  Serial.begin(115200);
+'  
+'  pinMode(inputPin, INPUT);
+'  attachInterrupt(digitalPinToInterrupt(inputPin), handleInterrupt, RISING);
+'  
+'  dac_output_enable(DAC_CHANNEL_1);
+' }
+' 
+' void loop() {
+'  if (interruptCounter > 1) {
+'    float frequency = 1000000.0 / period; // Frequenz in Hz
+'    
+'    // Begrenze die Frequenz auf den Bereich 0-1000 Hz für die Ausgabe
+'    frequency = constrain(frequency, 0, 1000);
+'    
+'    // Skaliere die Frequenz auf 0-3300 mV
+'    int outputVoltage = map(frequency, 0, 1000, 0, 3300);
+'    
+'    // Setze den analogen Ausgang
+'    dac_output_voltage(DAC_CHANNEL_1, outputVoltage / 13); // DAC erwartet Werte von 0-255
+'    
+'    Serial.print("Frequenz: ");
+'    Serial.print(frequency);
+'    Serial.print(" Hz, Ausgangsspannung: ");
+'    Serial.print(outputVoltage);
+'    Serial.println(" mV");
+'    
+'    interruptCounter = 0;
+'  }
+'  
+'  delay(100); // Kurze Pause, um die CPU-Auslastung zu reduzieren
+'}
+
+
 ![frequency detection](/assets/images/frequency-detection.svg)
 
 #### 3.1.5 Frequency detection
