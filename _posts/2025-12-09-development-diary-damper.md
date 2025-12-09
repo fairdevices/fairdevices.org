@@ -14,5 +14,5 @@ This is the development journal for an open source hardware washing machine damp
 ## 2 General technical facts
 
 + length: tbd.
-+ mounting holes: 8.0 mm for 
++ mounting holes: 8.0 mm for fitting screw
 
