@@ -20,7 +20,7 @@ what are typical damper types? which one fail sooner, which ones last? damper pa
  
 ## 3 fundamental differential equations for mass-spring-damper-sytsem
 
-The following GNU Octave script calculates and plots the amplitude of a damped mass-spring oscillator depending on the excitation frequency.
+The following [Octave Download](https://octave.org/download.html "GNU Octave") script calculates and plots the amplitude of a damped mass-spring oscillator depending on the excitation frequency.
 
 {% raw %}{% highlight octave %}
 % feder_masse_amplitude.m
@@ -75,8 +75,9 @@ drawnow;
 
 ## 2Do / Next Steps
 
-0. Documatation of physical and mathematical fundamentales to calculate load / stresses / amplidudes / optimum values 
-1. Determination of typical values for
+0. Documatation of physical and mathematical fundamentales to calculate load / stresses / amplidudes / optimum values by equations, figures, etc. All 'scientific' knowledge should be gathered. It's the base for opimisation by calculations and not trying ;)
+   
+2. Determination of typical values for
 - spring constants
 - damper constants
 - massrange of empty and fully loaded washing drum
@@ -86,7 +87,7 @@ in washing machines.
 3. calculation of forces and amplitudes, maximum allowable amplitudes / imbalance of loundry
 4. Investigation / List of available oil damper
 5. concept of frictionless, wearless, electromagnetic damper by Eddy Current or by generator coil
-
+6. estimation of unbalance force
 
 
 
