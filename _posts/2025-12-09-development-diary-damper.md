@@ -20,7 +20,7 @@ what are typical damper types? which one fail sooner, which ones last? damper pa
  
 ## 3 fundamental differential equations for mass-spring-damper-sytsem
 
-The following [Octave Download](https://octave.org/download.html "GNU Octave") script calculates and plots the amplitude of a damped mass-spring oscillator depending on the excitation frequency.
+The following [GNU Octave](https://octave.org/download.html "Octave Download") script calculates and plots the amplitude of a damped mass-spring oscillator depending on the excitation frequency.
 
 {% raw %}{% highlight octave %}
 % feder_masse_amplitude.m
