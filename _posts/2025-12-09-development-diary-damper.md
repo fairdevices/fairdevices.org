@@ -19,7 +19,59 @@ what are typical damper types? which one fail sooner, which ones last? damper pa
 + mounting holes: 8.0 mm for fitting screw
  
 ## 3 fundamental differential equations for mass-spring-damper-sytsem
-### octace script for calculations
-harmonic calculation of forces depending on rpm, loading/mass of spinning unit, ...
+
+The following GNU Octave script calculates and plots the amplitude of a damped mass-spring oscillator depending on the excitation frequency.
+
+{% raw %}{% highlight octave %}
+% feder_masse_amplitude.m
+% Berechnet und plottet die Amplitude eines gedämpften
+% Feder-Masse-Schwingers in Abhängigkeit von der Anregungsfrequenz.
+
+clear all; close all; clc;
+
+% ---- Parameter -------------------------------------------------
+m  = 1.0;        % Masse [kg]
+k  = 100.0;      % Federsteifigkeit [N/m]
+c  = 1.0;        % Dämpfungskonstante [N·s/m] (0 = ungedämpft)
+F0 = 1.0;        % Amplitude der Erregerkraft [N]
+
+% Eigenkreisfrequenz und Eigenfrequenz
+omega0 = sqrt(k/m);           % [rad/s]
+f0     = omega0/(2*pi);       % [Hz]
+
+% Frequenzachse um die Eigenfrequenz herum
+f_min = 0.0 * f0;             % untere Grenze [Hz]
+f_max = 3.0 * f0;             % obere Grenze [Hz]
+N     = 1000;                 % Anzahl Stützstellen
+
+f     = linspace(f_min, f_max, N);  % Frequenz [Hz]
+omega = 2*pi*f;                     % Kreisfrequenz [rad/s]
+
+% ---- Amplitudenberechnung --------------------------------------
+% A(omega) = F0 / sqrt((k - m*omega^2)^2 + (c*omega)^2)
+num  = F0;
+den  = sqrt( (k - m.*omega.^2).^2 + (c.*omega).^2 );
+A    = num ./ den;
+
+% ---- Plot ------------------------------------------------------
+figure;
+plot(f, A, 'LineWidth', 2);
+grid on;
+xlabel('Frequenz f [Hz]');
+ylabel('Amplitude A [m]');
+title('Amplitude eines gedämpften Feder-Masse-Schwingers');
+
+% Markiere Eigenfrequenz
+hold on;
+y_eig = interp1(f, A, f0);     % Amplitude bei Eigenfrequenz
+plot(f0, y_eig, 'ro', 'MarkerSize', 8, 'LineWidth', 2);
+text(f0, y_eig, sprintf('  f_0 = %.2f Hz', f0), ...
+     'VerticalAlignment', 'bottom');
+
+% Ausgabe sicherstellen, falls Skript nicht interaktiv läuft
+drawnow;
+% pause;    % optional aktivieren, wenn das Fenster offen bleiben soll
+{% endhighlight %}{% endraw %}
+
 
 
