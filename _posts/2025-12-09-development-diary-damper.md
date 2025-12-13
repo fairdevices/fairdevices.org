@@ -135,5 +135,21 @@ Das folgende <span class="custom-code-inline">GNU Octave</span> Skript berechnet
 
 <div class="custom-code-block">
 
+% feder_masse_amplitude.m
+clear all; close all; clc;
+
+m = 1.0; k = 100.0; c = 1.0; F0 = 1.0;
+omega0 = sqrt(k/m); f0 = omega0/(2*pi);
+
+f = linspace(0, 3f0, 1000);
+omega = 2pi*f;
+A = F0 ./ sqrt( (k - m.*omega.^2).^2 + (c.*omega).^2 );
+
+figure; plot(f, A, 'LineWidth', 2, 'Color', '#60a5fa');
+grid on; xlabel('Frequenz f [Hz]'); ylabel('Amplitude A [m]');
+title('Feder-Masse-Schwinger Amplitude');
+drawnow;
+
+</div>
 
 
