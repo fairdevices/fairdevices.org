@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Development Journal for universal washing machine damper"
-date:   2025-12-08 18:30:00 +0200
+date:   2025-12-13 18:30:00 +0200
 categories: jekyll update
 ---
 
@@ -96,6 +96,8 @@ in washing machines.
 4. Investigation / List of available oil damper
 5. concept of frictionless, wearless, electromagnetic damper by Eddy Current or by generator coil
 6. estimation of unbalance force
+
+...
 
 
 
