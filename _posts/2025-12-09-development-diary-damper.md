@@ -73,5 +73,21 @@ drawnow;
 % pause;    % optional aktivieren, wenn das Fenster offen bleiben soll
 {% endhighlight %}{% endraw %}
 
+## 2Do / Next Steps
+
+0. Documatation of physical and mathematical fundamentales to calculate load / stresses / amplidudes / optimum values 
+1. Determination of typical values for
+- spring constants
+- damper constants
+- massrange of empty and fully loaded washing drum
+in washing machines.
+
+2. Note values in this document
+3. calculation of forces and amplitudes, maximum allowable amplitudes / imbalance of loundry
+4. Investigation / List of available oil damper
+5. concept of frictionless, wearless, electromagnetic damper by Eddy Current or by generator coil
+
+
+
 
 
