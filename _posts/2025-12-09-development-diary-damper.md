@@ -22,6 +22,10 @@ what are typical damper types? which one fail sooner, which ones last? damper pa
 
 The following [GNU Octave](https://octave.org/download.html "Octave Download") script calculates and plots the amplitude of a damped mass-spring oscillator depending on the excitation frequency.
 
+<div class="code-highlight">
+Hier ist dein Octave-Code...
+</div>
+
 {% raw %}{% highlight octave %}
 % feder_masse_amplitude.m
 % Berechnet und plottet die Amplitude eines gedämpften
