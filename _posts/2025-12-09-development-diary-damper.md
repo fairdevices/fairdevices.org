@@ -31,19 +31,19 @@ The following [GNU Octave](https://octave.org/download.html "https://octave.org/
 clear all; close all; clc;
 
 % ---- Parameter -------------------------------------------------
-m  = 1.0;        % Masse [kg]
-k  = 100.0;      % Federsteifigkeit [N/m]
-c  = 1.0;        % Dämpfungskonstante [N·s/m] (0 = ungedämpft)
-F0 = 1.0;        % Amplitude der Erregerkraft [N]
+m  = 1.0;        % Mass / kg 
+k  = 100.0;      % spring constant / N/m
+c  = 1.0;        % damper constant / N·s/m (0 = undamped)
+F0 = 1.0;        % amplitude of excitation force / N
 
-% Eigenkreisfrequenz und Eigenfrequenz
-omega0 = sqrt(k/m);           % [rad/s]
-f0     = omega0/(2*pi);       % [Hz]
+% Natural angular frequency and natural frequency
+omega0 = sqrt(k/m);           % / rad/s
+f0     = omega0/(2*pi);       % / Hz
 
 % Frequenzachse um die Eigenfrequenz herum
-f_min = 0.0 * f0;             % untere Grenze [Hz]
-f_max = 3.0 * f0;             % obere Grenze [Hz]
-N     = 1000;                 % Anzahl Stützstellen
+f_min = 0.0 * f0;             % lower limit / Hz
+f_max = 3.0 * f0;             % upper limit / Hz
+N     = 1000;                 % Number of Stützstellen
 
 f     = linspace(f_min, f_max, N);  % Frequenz [Hz]
 omega = 2*pi*f;                     % Kreisfrequenz [rad/s]
