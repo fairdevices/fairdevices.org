@@ -39,10 +39,6 @@ github.repository_url: https://github.com/fairdevices/fairdevices.org
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-feed
-  
-sass:
-  sass_dir: _sass
 
 # Build settings
 markdown: kramdown
