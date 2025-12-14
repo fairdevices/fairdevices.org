@@ -73,9 +73,7 @@ text(f0, y_eig, sprintf('  f_0 = %.2f Hz', f0), ...
 % Ausgabe sicherstellen, falls Skript nicht interaktiv läuft
 drawnow;
 % pause;    % optional aktivieren, wenn das Fenster offen bleiben soll
-{% endraw %}
 
-}
 ```
 
 
