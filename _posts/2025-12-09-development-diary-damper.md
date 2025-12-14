@@ -24,60 +24,64 @@ The following [GNU Octave](https://octave.org/download.html "https://octave.org/
 
 
 ```
-
-% feder_masse_amplitude.m
-% Berechnet und plottet die Amplitude eines gedämpften
-% Feder-Masse-Schwingers in Abhängigkeit von der Anregungsfrequenz.
+% spring_dampe_mass_amplitude.m
+% Calculates and plots the amplitude of a damped
+% spring–mass oscillator as a function of the excitation frequency.
 
 clear all; close all; clc;
 
-% ---- Parameter -------------------------------------------------
-m  = 1.0;        % Mass / kg 
-k  = 100.0;      % spring constant / N/m
-c  = 1.0;        % damper constant / N·s/m (0 = undamped)
-F0 = 1.0;        % amplitude of excitation force / N
+% ---- Parameters -------------------------------------------------
+m  = 1.0;        % Mass / kg
+k  = 100.0;      % Spring constant / N/m
+c  = 1.0;        % Damping constant / N·s/m (0 = undamped)
+F0 = 1.0;        % Amplitude of the excitation force / N
 
 % Natural angular frequency and natural frequency
 omega0 = sqrt(k/m);           % / rad/s
 f0     = omega0/(2*pi);       % / Hz
 
-% Frequenzachse um die Eigenfrequenz herum
-f_min = 0.0 * f0;             % lower limit / Hz
-f_max = 3.0 * f0;             % upper limit / Hz
-N     = 1000;                 % Number of Stützstellen
+% Frequency axis around the natural frequency
+f_min = 0.0 * f0;             % Lower limit / Hz
+f_max = 3.0 * f0;             % Upper limit / Hz
+N     = 1000;                 % Number of support points
 
-f     = linspace(f_min, f_max, N);  % Frequenz [Hz]
-omega = 2*pi*f;                     % Kreisfrequenz [rad/s]
+f     = linspace(f_min, f_max, N);  % Frequency [Hz]
+omega = 2*pi*f;                     % Angular frequency [rad/s]
 
-% ---- Amplitudenberechnung --------------------------------------
+% ---- Amplitude calculation --------------------------------------
 % A(omega) = F0 / sqrt((k - m*omega^2)^2 + (c*omega)^2)
 num  = F0;
 den  = sqrt( (k - m.*omega.^2).^2 + (c.*omega).^2 );
 A    = num ./ den;
 
+% ---- Spring force calculation -----------------------------------
+% Peak spring force magnitude: |F_spring| = k * A (from F_s = -k x)
+F_spring = k .* A;  % / N
+
 % ---- Plot ------------------------------------------------------
 figure;
-plot(f, A, 'LineWidth', 2);
-grid on;
-xlabel('Frequenz f [Hz]');
-ylabel('Amplitude A [m]');
-title('Amplitude eines gedämpften Feder-Masse-Schwingers');
-
-% Markiere Eigenfrequenz
+plot(f, A, 'LineWidth', 2, 'DisplayName', 'Amplitude');
 hold on;
-y_eig = interp1(f, A, f0);     % Amplitude bei Eigenfrequenz
+plot(f, F_spring/1000, 'LineWidth', 2, 'DisplayName', 'Spring Force /kN');  % Scaled for visibility
+grid on;
+xlabel('Frequency f /Hz');
+ylabel('Amplitude A /m , Force / kN');
+title('Amplitude and Spring Force of Damped Spring-Mass Oscillator');
+legend('Location', 'best');
+
+% Enlarge font size for all axes text (title, labels, ticks, legend)
+set(gca, 'FontSize', 16);  % Adjust 16 to your preferred size (e.g., 20 for even larger)
+
+% Mark the natural frequency
+y_eig = interp1(f, A, f0);     % Amplitude at natural frequency
 plot(f0, y_eig, 'ro', 'MarkerSize', 8, 'LineWidth', 2);
 text(f0, y_eig, sprintf('  f_0 = %.2f Hz', f0), ...
      'VerticalAlignment', 'bottom');
 
-% Ausgabe sicherstellen, falls Skript nicht interaktiv läuft
 drawnow;
-% pause;    % optional aktivieren, wenn das Fenster offen bleiben soll
+% pause;    % Optionally enable if you want the window to remain open
 
 ```
-
-
-
 
 
 ## 2Do / Next Steps
