@@ -24,6 +24,7 @@ The following [GNU Octave](https://octave.org/download.html "https://octave.org/
 
 
 ```
+
 % feder_masse_amplitude.m
 % Berechnet und plottet die Amplitude eines gedämpften
 % Feder-Masse-Schwingers in Abhängigkeit von der Anregungsfrequenz.
@@ -72,7 +73,7 @@ text(f0, y_eig, sprintf('  f_0 = %.2f Hz', f0), ...
 % Ausgabe sicherstellen, falls Skript nicht interaktiv läuft
 drawnow;
 % pause;    % optional aktivieren, wenn das Fenster offen bleiben soll
-{% endhighlight %}{% endraw %}
+{% endraw %}
 
 }
 ```
