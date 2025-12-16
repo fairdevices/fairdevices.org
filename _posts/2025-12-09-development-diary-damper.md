@@ -31,8 +31,8 @@ The following [GNU Octave](https://octave.org/download.html "https://octave.org/
 clear all; close all; clc;
 
 % ---- Parameters -------------------------------------------------
-m  = 1.0;        % Mass / kg
-k  = 100.0;      % Spring constant / N/m
+m  = 40.0;        % Mass / kg
+k  = 15000.0;      % Spring constant / N/m
 c  = 1.0;        % Damping constant / N·s/m (0 = undamped)
 F0 = 1.0;        % Amplitude of the excitation force / N
 
@@ -116,8 +116,20 @@ title(sprintf('Unbalance force F(n) for r = %.3f m and m = 1...8 kg', r));
 legend('show', 'Location', 'northwest');
 ```
 ---
-DIAGRAM
+DIAGRAM placeholder
 ---
+
+3.3 spring constant
+
+Assumptions:
+
+- mass of tub = 30 kg
+- water mass = 10 kg
+- loundry mass = 1..8 kg
+
+max delta for static load: 2.5 cm 
+
+Spring constant for 3 parallel springs: 15000 N/m
 
 
 ## 2Do / Next Steps
