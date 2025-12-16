@@ -19,9 +19,9 @@ what are typical damper types? which one fail sooner, which ones last? damper pa
 + mounting holes: 8.0 mm for fitting screw
  
 ## 3 fundamental differential equations for mass-spring-damper-sytsem
+### 3.1 amplitude vs. frequency
 
 The following [GNU Octave](https://octave.org/download.html "https://octave.org/download.html") script calculates and plots the amplitude of a damped mass-spring oscillator depending on the excitation frequency.
-
 
 ```
 % spring_dampe_mass_amplitude.m
@@ -82,6 +82,42 @@ drawnow;
 % pause;    % Optionally enable if you want the window to remain open
 
 ```
+### 3.2 unbalanced forces vs. rpm
+
+The following scipt calculates the unbalance forces as a funktion of the rotations per minute. Huge forces arise out of a unproper balance which is why the Fairdevices control unit needs to have function to minimise the unbalance of loundry inside the machine.
+
+```
+% Unbalance force of a rotating mass
+% m in kg, r in m, n in 1/min
+
+clear all; close all; clc;
+
+% Parameters
+r = 0.25;                 % Radius in m (example value 0.1 m)
+n = linspace(0, 1400, 500);   % Speed from 0 to 1400 rpm
+
+% Convert speed to angular velocity
+omega = 2*pi*n/60;       % rad/s
+
+% Family of curves for masses 1 ... 8 kg
+m_vec = 1:1:8;
+
+figure;
+hold on; grid on;
+
+for m = m_vec
+    F = m * r .* (omega.^2);    % Unbalance force in N
+    plot(n, F, 'DisplayName', sprintf('m = %d kg', m));
+end
+
+xlabel('Speed n [rpm]');
+ylabel('Unbalance force F [N]');
+title(sprintf('Unbalance force F(n) for r = %.3f m and m = 1...8 kg', r));
+legend('show', 'Location', 'northwest');
+```
+---
+DIAGRAM
+---
 
 
 ## 2Do / Next Steps
