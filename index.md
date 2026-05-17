@@ -1,13 +1,3 @@
-<!-- Navigationsleiste Start -->
-<p align="center">
-  <a href="/">Home</a> &nbsp;|&nbsp; 
-  <a href="/products">products</a> &nbsp;|&nbsp; 
-  <a href="/news"> news </a> &nbsp;|&nbsp; 
-  <a href="/join"> join </a> &nbsp;|&nbsp; 
-  <a href="/join"> donate </a> &nbsp;|&nbsp; 
-</p>
----
-
 ---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
