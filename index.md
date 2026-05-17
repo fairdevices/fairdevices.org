@@ -1,3 +1,14 @@
+<!-- Navigationsleiste Start -->
+<p align="center">
+  <a href="/">🏠 Home</a> &nbsp;|&nbsp; 
+  <a href="/produkte">📦 Produkte</a> &nbsp;|&nbsp; 
+  <a href="/news">📢 News</a> &nbsp;|&nbsp; 
+  **<a href="/devlog">🛠️ DevLog (Tagebuch)</a>** &nbsp;|&nbsp; 
+  <a href="/mitmachen">🤝 Mitmachen</a> &nbsp;|&nbsp; 
+  <a href="https://github.com/dein-repo" target="_blank">💻 GitHub</a>
+</p>
+---
+
 ---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
