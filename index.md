@@ -1,11 +1,10 @@
 <!-- Navigationsleiste Start -->
 <p align="center">
-  <a href="/">🏠 Home</a> &nbsp;|&nbsp; 
-  <a href="/produkte">📦 Produkte</a> &nbsp;|&nbsp; 
-  <a href="/news">📢 News</a> &nbsp;|&nbsp; 
-  **<a href="/devlog">🛠️ DevLog (Tagebuch)</a>** &nbsp;|&nbsp; 
-  <a href="/mitmachen">🤝 Mitmachen</a> &nbsp;|&nbsp; 
-  <a href="https://github.com/dein-repo" target="_blank">💻 GitHub</a>
+  <a href="/">Home</a> &nbsp;|&nbsp; 
+  <a href="/products">products</a> &nbsp;|&nbsp; 
+  <a href="/news"> news </a> &nbsp;|&nbsp; 
+  <a href="/join"> join </a> &nbsp;|&nbsp; 
+  <a href="/join"> donate </a> &nbsp;|&nbsp; 
 </p>
 ---
 
