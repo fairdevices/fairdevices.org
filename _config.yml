@@ -47,6 +47,7 @@ permalink: pretty
 header_pages:
   - calendar.md
   - about.md
+  - donate.md
 
 # Defaults
 defaults:
