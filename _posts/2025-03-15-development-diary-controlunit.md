@@ -34,8 +34,8 @@ Conventional washing machines without a converter drive have the following three
 #### 3.1.1 230 V-Level
 Fuse, Filter to reduce EMC levels of the universal motor
 
-### 3.1.2 12-V-Level
-The 12 V will be provided by a separat power supply unit. This will make the control more robust overall. The power functionality of the power supply unit can be checked easily by a multimeter. It can be purchased or taken from an old PC. The latter one would also provide 5 V which is used for the 3.3 V. Alternatively almost every smartphone charger can provide the 5V and 500 mA easily.
+### 3.1.2 -12-V-Level
+The -12 V will be provided by a separat power supply unit. This will make the control more robust overall. The power functionality of the power supply unit can be checked easily by a multimeter. It can be purchased or taken from an old PC. The latter one would also provide 5 V which is used for the 3.3 V. Alternatively almost every smartphone charger can provide the 5V and 500 mA easily.
 
 #### 3.1.3 3.3-V-Level
 The stabilized power supply of 3.3 V for the microcontroller is realized via a linear regulator from 5V.
@@ -144,30 +144,62 @@ RPM, direction, tumbling, spinning
 #### 3.5 magnetic valves for cold and hot water
 Electric parameters for valves: 230 V, xxx? A
 
-## 4 Fault identification strategies
+## 4 Software
+What should the Software do on the µC
+
+### 4.1 connectivity 
+For the first trials, there must be a steady interface allowing the connection with the µC. Firmware is suppossed to be update by wire / USB. Operation is supposed to be done via WLAN.
+It would be an enormous effort to implement all panel buttons of an existing washing machine to the control unit. As a first step, it would be more easy to operate the first machines via a bowser- or app gui. There should be a standard interface for the maximum instantaneous output power of the solar inverter. If the latter one says, I am putting 200 W into the net, then the machine should also only take 200 Ws  
+
+### 4.2 washing programms
+
+For the beginning, 2...3 dummy programms with the same time-function-regine are just fine: open water valve, heating, low speed spinning right/left, heating, drain pump, high speed spinning, unlock door. 
+Would it be reasonable to define and program states for the programms, to prevent malfunctions. E.g. there needs to be water in the vat before heating. spinning is only allow after a succesful balancing run.  
+
+### 4.3 Subroutings for switching relais and triac
+Certain GPIOs will be set to serve the switching of actors and sensors. Thier signals need to be syncronous with the AC voltage. Especially the triacs need to be triggerd correctly every half wave. 
+
+
+## 5 Fault identification strategies
 
 Similar to cars, which tell you that i.e. the rear right brake light is defective, the control system should be able to check itself or detect faults in the controlled components.
 
-### 4.1 dampers
+### 5.1 dampers
 - The washing drum is a spring-mass oscillator → natural frequency → if a corresponding current harmonic in the motor current is too high, then the damper is worn out.
 
-### 4.2 main bearing
+### 5.2 main bearing
 - acoustic signal via piezo microphone.
 
-### 4.3 heating
+### 5.3 heating
 - no current, broken fuse, earth fault
 
-### 4.4 main motor
+### 5.4 main motor
 - no current, then defected carbon brushes 
 
-### 4.5 drain pump
+### 5.5 drain pump
 
-## 5 Question lists
+## 6 Question lists
 - 12V vs 24 V bei den Relais? → 12 V is supposed to be cheaper because more common through automotiv.
 - Relais vs Thyristoren vs SSR?
 
-## 6 2Do list
+## 7 2Do list
 - Frequency detection with capacitive divider
 - Washing programme, times, motor speed for tumbling
 - ECO-Modes: temperature reduction and time extension
 - determination of switch-off times of relay
+- software:
+-   libs for washing programms
+    * Hand
+    * Wool
+    * etc
+    * time adpation for eco
+  
+-   browser gui
+    * one drop down menu für programm
+    * one drop down menu / slider switch for Temperatur
+    * one drop down menu / slider switch for spinning speed
+    * Start / Stop / Reset / Continue - buttons
+    * Status window for every change of state, operation by the µC
+ 
+-   app gui
+    * see browser
