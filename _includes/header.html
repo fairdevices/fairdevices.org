@@ -20,7 +20,10 @@
           {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
             {%- if my_page.title -%}
-            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+              {%- if my_page.title == "Imprint" or my_page.title == "Impressum" -%}
+                <a class="page-link" href="{{ "/donate/" | relative_url }}" style="color: #ff4757; font-weight: bold;">♥ Donate</a>
+              {%- endif -%}
+              <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
         </div>
